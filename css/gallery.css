@@ -1,0 +1,207 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(10, 27, 20);
+    color: #333;
+    text-align: center;
+    line-height: 1.6;
+}
+/* General header styling     */
+header {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #4c77af; 
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Styling the header title */
+header h1 {
+    font-size: 2.5rem; /* Large and bold */
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Text glow effect */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling the search bar container */
+header div {
+    margin-top: 15px; 
+    width: 100%; 
+    max-width: 500px;
+    display: flex;
+    justify-content: center; 
+}
+
+/* Styling the search input field */
+header input[type="text"] {
+    width: 100%; 
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    outline: none; 
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Add hover and focus effects to the input field */
+header input[type="text"]:hover,
+header input[type="text"]:focus {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Intensify shadow */
+    border-color: #f0f0f0; /* Change border color */
+}
+
+/* Gallery Section */
+#gallery {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Figure and large image styling */
+figure {
+    margin: 0 auto 20px auto;
+    text-align: center;
+    position: relative;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border: 4px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Caption styling */
+figcaption {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+}
+
+/* Thumbnails container */
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap; /* Allow thumbnails to wrap onto new lines */
+    justify-content: center; /* Center thumbnails horizontally */
+    gap: 15px; /* Space between thumbnails */
+    margin: 0;
+    padding: 0;
+}
+
+/* Thumbnails styling */
+.thumbnails li {
+    list-style: none; /* Remove list bullets */
+    display: inline-block; /* Align items in a row */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.thumbnails img {
+    width: 120px;
+    height: 80px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1);
+    border-color: #4CAF50;
+}
+
+/* Album title styling */
+.album h2 {
+    font-size: 1.8rem;
+    margin: 20px 0 10px;
+    color: #333;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+/* Album container styling */
+.album {
+    margin-bottom: 40px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    figure img {
+        width: 100%; /* Ensure the image adjusts to container width */
+    }
+
+    .thumbnails img {
+        width: 100px;
+        height: 70px;
+    }
+}
+/* General footer styling */
+footer {
+    background-color: #333; /* Dark background for contrast */
+    color: #fff; /* White text color */
+    padding: 20px 0; /* Top and bottom padding */
+    text-align: center; /* Center align the text */
+    font-family: 'Arial', sans-serif; /* Clean font */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow at the top */
+    border-top: 3px solid #4CAF50; /* Green line at the top for a pop of color */
+}
+
+/* Footer heading styling */
+footer h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: normal; /* Make the heading weight light */
+    letter-spacing: 1px; /* Slight spacing between letters */
+    text-transform: uppercase; /* Make it look more formal */
+    opacity: 0.7; /* Slight transparency for subtlety */
+}
+
+
+/* for responsive design */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem; /* Adjust the title size for smaller screens */
+    }
+
+    header input[type="text"] {
+        font-size: 0.9rem; /* Adjust input font size */
+    }
+
+    .thumbnails img {
+        width: 80px;
+        height: 60px;
+    }
+
+    .album h2 {
+        font-size: 1.5rem;
+    }
+    footer h2 {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        letter-spacing: 0.5px; /* Reduce letter spacing */
+    }
+}
